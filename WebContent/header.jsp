@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Division Result is :
+	Hello, 
+	<%
+		pageContext.setAttribute("name", "Human", PageContext.PAGE_SCOPE);
+	%>
 </body>
 </html>

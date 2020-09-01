@@ -15,11 +15,13 @@
 	double result;
 %>
 <%
+	out.println(pageContext.getAttribute("name"));
 	num1 = 10;
 	num2 = 2;
 	result = num1/num2;
 %>
-<%= result %>
+<br>
+Division Result is :<%= result %>
 
 </body>
 </html>
