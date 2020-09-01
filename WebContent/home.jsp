@@ -1,5 +1,5 @@
 <%@page import="java.util.Scanner"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" import="java.sql.Statement, java.util.HashMap"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" errorPage="error.jsp" import="java.sql.Statement, java.util.HashMap"%>
 <%@ page import="java.util.HashSet" %>
 <%@ include file="header.jsp" %>
 
@@ -16,9 +16,10 @@
 %>
 <%
 	out.println(pageContext.getAttribute("name"));
-	num1 = 10;
-	num2 = 2;
+	num1 = Integer.parseInt(request.getParameter("num1"));
+	num2 = Integer.parseInt(request.getParameter("num2"));
 	result = num1/num2;
+	
 %>
 <br>
 Division Result is :<%= result %>
